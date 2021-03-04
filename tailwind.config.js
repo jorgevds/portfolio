@@ -41,7 +41,7 @@ module.exports = {
       blueDark: "#2e4a5a",
     },
     fontFamily: {
-      title: ["Newsreader", "serif"],
+      title: ["Barlow", "sans-serif"],
       body: ["sans-serif"],
     },
     inset: {

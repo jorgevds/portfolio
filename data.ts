@@ -3,7 +3,7 @@ export const projectList = [
     id: 1,
     name: "Inventory",
     caption:
-      "Inventory and grocery list in Next.js, TypeScript, TailwindCSS and Firebase with contact form, Recaptcha and login functionality.",
+      "Inventory and grocery list in Next.js, TypeScript, TailwindCSS and Firebase with login authentication.",
     img: "/img/inventory.jpg",
     url: "https://inventory.jorgevds.vercel.app/",
   },

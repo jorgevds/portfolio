@@ -12,11 +12,11 @@ const Projects: React.FC<ProjectsProps> = () => {
       <ul className="grid grid-cols-1 gap-8 p-4 py-8 m-auto text-center minxl:grid-cols-2">
         {projectList.map((project) => (
           <div
-            className="relative flex flex-col m-auto text-center hover-trigger"
+            className="flex flex-col m-auto text-center hover-trigger"
             key={project.id}
           >
             <a
-              className="pb-2"
+              className="relative pb-2"
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
