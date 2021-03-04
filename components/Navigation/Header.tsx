@@ -6,8 +6,8 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="w-full bg-white shadow-sm">
       <nav className="flex flex-col">
-        <ul className="flex py-4 pt-6 m-auto">
-          <li className="font-serif text-xl tracking-wider uppercase">
+        <ul className="flex pt-6 pb-2 m-auto">
+          <li className="font-serif text-2xl tracking-widest uppercase font-title">
             Jorge Van de Sompel
           </li>
         </ul>

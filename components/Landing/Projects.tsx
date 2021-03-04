@@ -27,7 +27,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                 title="Click me! I am safe and open in a new tab!"
                 className="hover-img"
               />
-              <li className="absolute z-10 text-white inset-center hover-target md:opacity-0">
+              <li className="absolute z-10 w-9/12 text-white inset-center hover-target md:opacity-0">
                 {project.caption}
               </li>
             </a>

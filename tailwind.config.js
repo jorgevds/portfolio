@@ -41,7 +41,7 @@ module.exports = {
       blueDark: "#2e4a5a",
     },
     fontFamily: {
-      title: ["Sansita Swashed", "cursive"],
+      title: ["Newsreader", "serif"],
       body: ["sans-serif"],
     },
     inset: {

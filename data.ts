@@ -3,7 +3,7 @@ export const projectList = [
     id: 1,
     name: "Inventory",
     caption:
-      "Inventaris en boodschappenlijst app in Next.js, TypeScript, TailwindCSS en Firebase met contact form, Recaptcha en login functionaliteit.",
+      "Inventory and grocery list in Next.js, TypeScript, TailwindCSS and Firebase with contact form, Recaptcha and login functionality.",
     img: "/img/inventory.jpg",
     url: "https://inventory.jorgevds.vercel.app/",
   },
@@ -11,7 +11,7 @@ export const projectList = [
     id: 2,
     name: "Pod",
     caption:
-      "Een responsive landing page naar een ontwerp van Frontendmentor.io.",
+      "Responsive landing page according to a design by Frontendmentor.io.",
     img: "/img/pod.jpg",
     url: "https://jorgevds.github.io/pod/",
   },
@@ -19,7 +19,7 @@ export const projectList = [
     id: 3,
     name: "Wolf's Workshop",
     caption:
-      "Het laatste nieuwe in landing page technologie: een landing page voor een keyboard webshop!",
+      "The latest in landing page technology: a landing page for a keyboard web shop!",
     img: "/img/wolfs-workshop.jpg",
     url: "https://wolf-workshop-git-main.jorgevds.vercel.app/",
   },
@@ -27,22 +27,21 @@ export const projectList = [
     id: 4,
     name: "Contractor",
     caption:
-      "Een PWA (progressive web app) met SPA (single page application) voor een fictieve freelance/aannemerswebsite in Next.js, een React framework.",
+      "PWA (progressive web app) with SPA (single page application) for a contractor website in Next.js.",
     img: "/img/contractor.jpg",
     url: "https://contractor-tau.now.sh/",
   },
   {
     id: 5,
     name: "Quiz Yourself",
-    caption: "Een quiz app in React met TypeScript en styled-components.",
+    caption: "Quiz app in React.js and TypeScript with styled-components.",
     img: "/img/react-quiz.jpg",
     url: "https://quiz-dusky.vercel.app/",
   },
   {
     id: 6,
     name: "Bakkerij Alfons",
-    caption:
-      "Een website voor een fictieve bakkerij met Sass preprocessor i.p.v. CSS.",
+    caption: "Website for a fictional bakery with Sass preprocessor.",
     img: "/img/bakkerij-alfons.jpg",
     url: "https://jorgevds.github.io/alfons/",
   },
@@ -50,7 +49,7 @@ export const projectList = [
     id: 7,
     name: "Robofriends",
     caption:
-      "Een robot filter app gebouwd in React met Redux. De robots worden gebouwd a.d.h.v. de Robohash API.",
+      "Robot filter app in React-Redux using the Robohash API as part of a Skillshare course.",
     img: "/img/robofriends.jpg",
     url: "https://github.com/jorgevds/robo-redux",
   },
@@ -58,7 +57,7 @@ export const projectList = [
     id: 8,
     name: "Willypedia Annex Documenta",
     caption:
-      "Een web app over Roggeman met dynamische links naar essays in Markdown en foto's in Next.js, een React framework.",
+      "Web app about Willy Roggeman with dynamic links to essays in Markdown and photos in Next.js.",
     img: "/img/willypedia-annex-documenta.jpg",
     url: "https://willypedia-annex-documenta.now.sh/",
   },

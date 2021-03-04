@@ -14,6 +14,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <title>Jorge Van de Sompel portfolio</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap"
+          rel="stylesheet"
+        />
         {/* favicon */}
         <link
           rel="apple-touch-icon"

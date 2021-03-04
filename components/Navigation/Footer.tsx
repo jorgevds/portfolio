@@ -38,7 +38,7 @@ const Footer: React.FC<FooterProps> = () => {
             </a>
           </li>
         </ul>
-        <ul className="flex m-auto text-sm">
+        <ul className="flex m-auto my-2 text-sm">
           <li className="m-auto sm:px-8">
             Copyright &copy; {new Date().getUTCFullYear()}. All rights reserved.
           </li>
