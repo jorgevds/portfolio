@@ -7,19 +7,23 @@
 }
 
 .hover-trigger .hover-target {
-    display: none;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .hover-trigger:hover .hover-target {
-    display: block;
+    opacity: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 .hover-trigger .hover-img {
     filter: brightness(100%);
+    transition: all 0.2s ease-in-out;
 }
 
 .hover-trigger:hover .hover-img {
-    filter: brightness(40%);
+    filter: brightness(30%);
+    transition: all 0.2s ease-in-out;
 }
 
 @tailwind components;

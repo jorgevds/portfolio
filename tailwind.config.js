@@ -60,11 +60,17 @@ module.exports = {
     },
     plugins: [],
     screens: {
+      xxxl: { min: "2040px" },
+      // => @media (min-width: 2040px) { ... }
+
       xxl: { max: "2040px" },
       // => @media (max-width: 2040px) { ... }
 
       xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
+
+      minxl: { min: "1025px" },
+      // => @media (min-width: 1025px) { ... }
 
       minlg: { min: "769px" },
       // => @media (max-width: 769px) { ... }

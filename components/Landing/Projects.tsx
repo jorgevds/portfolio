@@ -9,14 +9,14 @@ const Projects: React.FC<ProjectsProps> = () => {
       className="w-4/5 h-auto m-auto mb-12 rounded-lg shadow-md minlg:w-3/5"
       id="projects"
     >
-      <ul className="grid grid-cols-2 gap-8 p-4 py-8 m-auto text-center">
+      <ul className="grid grid-cols-1 gap-8 p-4 py-8 m-auto text-center minxl:grid-cols-2">
         {projectList.map((project) => (
           <div
             className="relative flex flex-col m-auto text-center hover-trigger"
             key={project.id}
           >
             <a
-              className="pb-2 hover-img"
+              className="pb-2"
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -25,12 +25,13 @@ const Projects: React.FC<ProjectsProps> = () => {
                 src={project.img}
                 alt={project.caption}
                 title="Click me! I am safe and open in a new tab!"
+                className="hover-img"
               />
+              <li className="absolute z-10 text-white inset-center hover-target md:opacity-0">
+                {project.caption}
+              </li>
             </a>
             <li className="w-4/5 m-auto">{project.name}</li>
-            <li className="absolute z-10 text-white inset-center hover-target">
-              {project.caption}
-            </li>
           </div>
         ))}
       </ul>

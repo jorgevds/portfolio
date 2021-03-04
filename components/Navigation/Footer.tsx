@@ -4,32 +4,37 @@ interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <footer className="w-full shadow-smTop">
-      <nav className="flex flex-col py-2 m-auto">
-        <ul className="flex w-full py-2 m-auto">
-          <li className="m-auto sm:px-8">
+    <footer className="w-full m-auto text-center shadow-smTop">
+      <nav className="flex flex-col justify-center py-2 m-auto">
+        <ul className="flex justify-center w-full py-2 m-auto">
+          <li className="flex m-auto sm:px-8">
             <a
               href="https://github.com/jorgevds"
               target="_blank"
               rel="noopener noreferrer"
               title="Click me! I am safe and open in a new tab!"
+              className="m-auto"
             >
               <img src="/svg/githublogo.svg" className="m-auto" />
             </a>
           </li>
-          <li className="m-auto sm:px-8">
+          <li className="flex m-auto sm:px-8">
             <a
               href="https://www.linkedin.com/in/jorge-van-de-sompel-94607b191/"
               target="_blank"
               rel="noopener noreferrer"
               title="Click me! I am safe and open in a new tab!"
+              className="m-auto"
             >
-              <img src="/svg/gmail.svg" className="w-1/12 m-auto h-1/12" />
+              <img src="/svg/linkedin.svg" className="w-1/6 m-auto " />
             </a>
           </li>
-          <li className="w-1/6 m-auto sm:px-8">
-            <a href="mailto:jorgevandesompel@gmail.com?Subject=I%20want%20to%20talk">
-              <img src="/svg/gmail.svg" className="w-1/6 m-auto" />
+          <li className="flex m-auto sm:px-8">
+            <a
+              href="mailto:jorgevandesompel@gmail.com?Subject=I%20want%20to%20talk"
+              className="m-auto"
+            >
+              <img src="/svg/gmail.svg" className="w-1/6 m-auto " />
             </a>
           </li>
         </ul>

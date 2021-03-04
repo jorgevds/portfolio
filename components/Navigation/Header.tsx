@@ -5,21 +5,36 @@ interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="w-full bg-white shadow-sm">
-      <nav className="flex flex-col m-auto">
+      <nav className="flex flex-col">
         <ul className="flex py-4 pt-6 m-auto">
           <li className="font-serif text-xl tracking-wider uppercase">
             Jorge Van de Sompel
           </li>
         </ul>
-        <ul className="flex w-full pb-2 m-auto">
-          <li className="m-auto sm:px-8">
-            <a href="#about">About</a>
+        <ul className="flex w-full pb-2">
+          <li className="inline-block m-auto ">
+            <a
+              href="#about"
+              className="py-1 transition duration-300 ease-in-out minlg:px-16 minlg:hover:bg-black minlg:hover:text-white"
+            >
+              About
+            </a>
           </li>
-          <li className="m-auto sm:px-8">
-            <a href="#projects">Work</a>
+          <li className="inline-block m-auto ">
+            <a
+              href="#projects"
+              className="py-1 transition duration-300 ease-in-out minlg:px-16 minlg:hover:bg-black minlg:hover:text-white"
+            >
+              Work
+            </a>
           </li>
-          <li className="m-auto sm:px-8">
-            <a href="#contact">Contact</a>
+          <li className="inline-block m-auto ">
+            <a
+              href="#contact"
+              className="py-1 transition duration-300 ease-in-out minlg:px-16 minlg:hover:bg-black minlg:hover:text-white"
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
