@@ -6,7 +6,7 @@ interface ProjectsProps {}
 const Projects: React.FC<ProjectsProps> = () => {
   return (
     <article
-      className="w-4/5 h-auto m-auto mb-12 rounded-lg shadow-md"
+      className="w-4/5 h-auto m-auto mb-12 rounded-lg shadow-md minlg:w-3/5"
       id="projects"
     >
       <ul className="grid grid-cols-2 gap-8 p-4 py-8 m-auto text-center">
