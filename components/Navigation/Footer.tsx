@@ -15,7 +15,11 @@ const Footer: React.FC<FooterProps> = () => {
               title="Click me! I am safe and open in a new tab!"
               className="m-auto"
             >
-              <img src="/svg/githublogo.svg" className="m-auto" />
+              <img
+                src="/svg/githublogo.svg"
+                className="m-auto"
+                alt="Black and white Github mascot logo as svg"
+              />
             </a>
           </li>
           <li className="flex m-auto sm:px-8">
@@ -26,7 +30,11 @@ const Footer: React.FC<FooterProps> = () => {
               title="Click me! I am safe and open in a new tab!"
               className="m-auto"
             >
-              <img src="/svg/linkedin.svg" className="w-1/6 m-auto " />
+              <img
+                src="/svg/linkedin.svg"
+                className="m-auto"
+                alt="Linkedin logo as svg"
+              />
             </a>
           </li>
           <li className="flex m-auto sm:px-8">
@@ -34,7 +42,11 @@ const Footer: React.FC<FooterProps> = () => {
               href="mailto:jorgevandesompel@gmail.com?Subject=I%20want%20to%20talk"
               className="m-auto"
             >
-              <img src="/svg/gmail.svg" className="w-1/6 m-auto " />
+              <img
+                src="/svg/gmail.svg"
+                className="m-auto"
+                alt="Gmail logo as svg"
+              />
             </a>
           </li>
         </ul>
