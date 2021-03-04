@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="nl">
+      <Html lang="en">
         <Head />
         <body>
           <Main />
