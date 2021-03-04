@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [".components/**/*.tsx"],
+  purge: ["./components/**/*.tsx"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     borderRadius: {

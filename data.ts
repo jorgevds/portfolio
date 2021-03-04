@@ -12,7 +12,7 @@ export const projectList = [
     name: "Pod",
     caption:
       "Responsive landing page according to a design by Frontendmentor.io.",
-    img: "/img/pod-new.jpg",
+    img: "/img/pod.jpg",
     url: "https://jorgevds.github.io/pod/",
   },
   {
