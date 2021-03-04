@@ -1,0 +1,26 @@
+@tailwind base;
+.inset-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hover-trigger .hover-target {
+    display: none;
+}
+
+.hover-trigger:hover .hover-target {
+    display: block;
+}
+
+.hover-trigger .hover-img {
+    filter: brightness(100%);
+}
+
+.hover-trigger:hover .hover-img {
+    filter: brightness(40%);
+}
+
+@tailwind components;
+@tailwind utilities;
