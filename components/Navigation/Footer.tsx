@@ -6,7 +6,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="w-full m-auto text-center shadow-smTop">
       <nav className="flex flex-col justify-center py-2 m-auto">
-        <ul className="flex justify-center w-full py-2 m-auto">
+        <ul className="flex justify-center w-full py-2 m-auto minxl:w-3/5">
           <li className="flex m-auto sm:px-8">
             <a
               href="https://github.com/jorgevds"

@@ -9,7 +9,7 @@ const Projects: React.FC<ProjectsProps> = () => {
       className="w-4/5 h-auto m-auto mb-12 rounded-lg shadow-md minlg:w-3/5"
       id="projects"
     >
-      <ul className="grid grid-cols-1 gap-8 p-4 py-8 m-auto text-center minxl:grid-cols-2">
+      <ul className="grid grid-cols-2 gap-8 p-4 py-8 m-auto text-center lg:grid-cols-1 xxxl:grid-cols-3">
         {projectList.map((project) => (
           <div
             className="flex flex-col m-auto text-center hover-trigger"
