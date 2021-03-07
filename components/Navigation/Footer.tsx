@@ -6,7 +6,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="w-full m-auto text-center shadow-smTop">
       <nav className="flex flex-col justify-center py-2 m-auto">
-        <ul className="flex justify-center w-full py-2 m-auto minxl:w-3/5">
+        <ul className="flex justify-center w-full py-6 m-auto minxl:w-3/5">
           <li className="flex m-auto sm:px-8">
             <a
               href="https://github.com/jorgevds"
@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = () => {
             >
               <img
                 src="/svg/linkedin.svg"
-                className="m-auto"
+                className="m-auto chroma-icon"
                 alt="Linkedin logo as svg"
               />
             </a>
@@ -43,14 +43,14 @@ const Footer: React.FC<FooterProps> = () => {
               className="m-auto"
             >
               <img
-                src="/svg/gmail.svg"
-                className="m-auto"
+                src="/svg/mail.svg"
+                className="m-auto chroma-icon"
                 alt="Gmail logo as svg"
               />
             </a>
           </li>
         </ul>
-        <ul className="flex m-auto my-2 text-sm">
+        <ul className="flex m-auto mb-4 text-sm">
           <li className="m-auto sm:px-8">
             Copyright &copy; {new Date().getUTCFullYear()}. All rights reserved.
           </li>

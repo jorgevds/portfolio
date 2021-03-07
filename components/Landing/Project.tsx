@@ -10,6 +10,8 @@ const Project: React.FC<ProjectProps> = ({}) => {
         <div
           className="flex flex-col m-auto text-center hover-trigger"
           key={project.id}
+          data-aos="fade-up"
+          data-aos-once="true"
         >
           <a
             className="relative pb-2"

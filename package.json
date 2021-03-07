@@ -8,12 +8,14 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.3",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
