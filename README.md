@@ -27,7 +27,7 @@ In this project, I learned how to successfully purge unused styles. Purging spee
 ![Cut out all the fat](https://user-images.githubusercontent.com/54646908/110256849-679e0600-7f9b-11eb-8493-51aaa8163263.png)
 ###### Cut out all the fat :scissors:
 
-After some debugging I figured out this was because of an incorrect path specification. It was a little harder to debug mostly because I was scared of breaking production again. After breaking production one more time, I was finally able to find the right path. First, I needed to change .js into .tsx. Second, I simply forgot to put a forward slash between the "." and the "src". Oops. You live, you learn.
+After some debugging I figured out this was because of an incorrect path specification. It was a little harder to debug mostly because I was scared of breaking production again. After breaking production one more time, I was finally able to find the right path. First, I needed to change .js into .tsx. Second, I simply forgot to put a forward slash between "." and "components". Oops. You live, you learn.
 
 
 ### Fun with animations
