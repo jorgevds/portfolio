@@ -27,7 +27,56 @@
 }
 
 .chroma-icon {
-    filter: brightness(0%)
+    filter: brightness(0%);
+}
+
+.markdown h3 {
+    @apply pt-4 text-xl font-medium;
+}
+
+.markdown p {
+    @apply py-4;
+}
+
+.markdown p:last-child {
+    @apply pb-12;
+}
+
+.markdown-ol {
+    @apply py-4;
+}
+
+.markdown-ol h2 {
+    @apply pb-2 text-lg;
+}
+
+.markdown-ol ol {
+    @apply list-decimal;
+    padding-inline-start: 1rem;
+}
+
+.markdown a {
+    @apply text-blue;
+}
+
+.markdown a:hover {
+    @apply underline;
+}
+
+.blog-example {
+    @apply py-8 text-center minlg:py-12;
+}
+
+.blog-example p {
+    padding: 0;
+}
+
+.blog-example img {
+    @apply m-auto;
+}
+
+.blog-example + p {
+    padding-top: 0;
 }
 
 @tailwind components;
