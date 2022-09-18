@@ -22,6 +22,8 @@ export const BlogEntry: React.FC<BlogEntryProps> = ({ post }) => {
                             src={coverImage.src}
                             width={coverImage.width}
                             height={coverImage.height}
+                            placeholder="blur"
+                            blurDataURL={coverImage.src}
                         />
                         {excerptLines.map((line: string, index: number) => (
                             <p
