@@ -6,10 +6,10 @@ import "aos/dist/aos.css";
 import "../styles/index.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  });
-  return <Component {...pageProps} />;
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    });
+    return <Component {...pageProps} />;
 }
 
 export default MyApp;

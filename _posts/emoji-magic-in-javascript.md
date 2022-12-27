@@ -1,10 +1,10 @@
 ---
 title: "Emoji Magic in JavaScript"
 excerpt: "With great power comes an enormous amount of emojis. So many that most people never even get to use the more special (or mundane) ones, and even more people have probably never even heard of some emojis.<br>And I’m sure nobody in the history of the world has ever heard of an emoji ZWJ sequence."
-coverImage: 
-  src: "/blog/emoji/emoji-magic.png"
-  width: "1260"
-  height: "256"
+coverImage:
+    src: "/blog/emoji/emoji-magic.png"
+    width: "1260"
+    height: "256"
 date: "2022-09-18"
 ---
 
@@ -21,6 +21,7 @@ Yes, that’s right, an emoji ZWJ sequence. Say that five times fast.
 So what exactly is this sequence? The shortest explanation is the code above. Notice how in line three, two emojis are joined with a space in the middle and this seems to create a singular emoji. Looking under the hood, this technology is not quite new, and far from magic.
 
 ### Do the ZWJ
+
 In Unicode, there is a character known as a zero width joiner (or ZWJ, pronounced 'zwidge'), represented by the code U+200D or \&zwj; . This innocent character isn't used much in Germanic languages such as English, but sees wider use in Arabic or Hindu contexts. There it is used to connect two separate characters into a singular character, hence the name joiner.
 
 <div class="blog-example">
@@ -40,6 +41,7 @@ The transformative nature of this character is really the driving point behind t
 In Germanic languages, we don’t really see this. All we do to form words is we put one character in front of the other, marking the end of words with a space or a punctuation mark like a period or comma. It can be a little hard to grasp these sequences at first. But emojis work pretty much in the exact same way.
 
 ### Emojis
+
 We saw that emojis are not much more than a single character represented by unicode. We also saw that there is something known as a ZWJ which can apparently combine unicode into representing new symbols. Now it’s time to put them together.
 
 While some emojis are simple representations of single unicode, others are in fact combinations of them joined by the ZWJ character. We saw some examples already, but let’s look at some more examples and see what they look like under the hood.
@@ -95,6 +97,7 @@ Funnily enough, combining emojis does not always work. While there is a list of 
 Suppose the rainbow flag is unsupported on Android phones. If we use the rainbow flag from a laptop or computer or iPhone, we would still see the rainbow flag inline. But Android users would instead see the simple emojis represented side by side, just as if we had used the plain flag and the rainbow emojis separately. This rarely happens today, and used to happen a lot more in the past. Nowadays, phones and other computers have a fairly standardized range of emojis and we rarely see double emojis where the author intended for a sequence to be visible.
 
 ### Why do this
+
 You might be asking yourself: why would anyone do this? Why not just create more simple emojis instead of combining them in this way?
 
 As engineers, we don’t much like doing new work where old work will do just fine. In the same way, the emoji overlords can ‘create new emojis’ simply by pasting existing codes in a sequence. The creative possibilities of that are very appealing. Instead of needing to reserve extra unicode characters for new emojis, you can simply combine already reserved code in various ways. Above we looked at just a couple of these combinations, but these sequences are virtually endless. Think of it as combining components to form one larger component. If you’re familiar with Atomic CSS, that would be like combining atoms into molecules. The usefulness of an atom lies in its reusability. So if every new emoji is a simple one, they had better have some potential to be turned into a sequence.
@@ -106,6 +109,7 @@ There are other reasons for this as well. When emojis were first created, they w
 As is always the case, this standardization came with a <a href="https://www.unicode.org/emoji/proposals.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">set of rules</a>. Rules on using emojis, rules on translating unicode characters and sequences onto the screen, and rules on what emojis should be. Today, there are rules on how to propose a new emoji for adoption into unicode. And while it doesn’t really say anywhere that new emojis have to be sequences, there is an underlying expectation of quality for the emoji to be singular enough in order to become its very own emoji. Your proposal for a new emoji must answer a whole line of questions about the emoji, some of these asking ‘can your emoji be represented by a couple of existing emojis instead’. If the answer is yes, then the committee would probably only accept the new emoji in the form of a sequence. For new simple emojis, there’s a question about its potential in a sequence. If there is potential, then that would seem to me to rule out the possibility of including your new emoji as a sequence. Careful planning, thought, and deliberation goes into each new emoji and the standards are very strict. It would seem that the committee are already aware of the problem of littering the universe with too many emojis, especially simple ones, and would instead prefer mostly new sequences instead.
 
 ### The danger zone
+
 Unfortunately, emoji ZWJ sequences are not all sunshine and roses. All the way back in 2015, there was a <a href="https://unicode.org/L2/L2015/15319-emoji-zwj-seq-harmful.pdf" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">proposal</a> to halt all adoption of new emoji sequences. The very first reason for this actually had to do with the use of the ZWJ character, itself. Since this character existed previously with an established use in certain language families, using it for this new purpose with emojis seemed unnatural. Additionally, there are concerns for now standardized keyboard and text editing behavior. The questions raised in the proposal concern problems with backspacing, deleting (referred to as forward-deleting, aka pressing the 'delete' button), and text selection generally. Advice at the bottom of the proposal included a comprehensive list of these sequences, <a href="https://www.unicode.org/emoji/charts/emoji-zwj-sequences.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">which does in fact now exist</a>. It also suggested no new emoji sequences be added, advice that seemed to have fallen on deaf ears.
 
 Taking it back home, some programming languages seem to also struggle with emoji sequences from time to time. It is possible in JavaScript to spread each individual character into an array, or even join simple ones into sequences. But Swift, for example, doesn’t quite appreciate this party trick. Logically, if unicode characters are strings, they should return true if the proper parameter is entered through the ‘contains’ method, in this case the unicode corresponding to the character. Yet in a sequence, these simple emojis are paired with the ZWJ character, and so return false if you only look for the presence of the simple emoji in the sequence. <a href="https://stackoverflow.com/questions/43618487/why-are-emoji-characters-like-treated-so-strangely-in-swift-strings" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Confusing stuff.</a>
@@ -115,6 +119,7 @@ In the Julia programming language, emoji ZWJ sequences have kicked up dust too. 
 And you thought CORS errors were bad.
 
 ### Take home points
+
 Not quite fun and games, emojis. Some are more complex than others, being joined with either a variant selector or a ZWJ character. By their nature, they are a lot closer to low level programming: stuff like bytes, text encoding, unicode, and even binary. Though they seem innocent and innocuous, they can cause some serious hair-pulling, and indeed seem to have already done so in some programming languages.
 
 Whether as a party trick to impress your friends--and finally get them to stop asking you to fix their printer--or as a more serious part of a not-so-serious hobby application or even development code, keep in mind that the emoji rabbit hole does in fact go very very deep. Simple, silly little icons they may appear, but pull back the veil and you may be looking at a series of foreign symbols and a whole bunch of ones and zeroes.
@@ -123,13 +128,13 @@ Whether as a party trick to impress your friends--and finally get them to stop a
 <h2>Resources</h2>
 
 1. <a href="https://pit.farsi.rocks/persianword/zwj.htm" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Zero width joiner in Persian</a>
-2.  <a href="https://blog.emojipedia.org/emoji-zwj-sequences-three-letters-many-possibilities/" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emojipedia: emoji ZWJ sequences</a>
-3.  <a href="https://unicode-table.com/en/FE0F/" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Text and emoji variant</a>
-4.  <a href="https://www.latimes.com/business/technology/la-fi-tn-emoji-q-and-a-20160125-htmlstory.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Meet the Shadowy Overlords Who Approve Emojis</a>
-5.  <a href="https://www.unicode.org/emoji/proposals.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emoji proposal guidelines</a>
-6.  <a href="https://unicode.org/L2/L2015/15319-emoji-zwj-seq-harmful.pdf" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emoji ZWJ Sequence Considered Harmful</a>
-7.  <a href="https://www.unicode.org/emoji/charts/emoji-zwj-sequences.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">List of standardized emoji ZWJ sequences</a>
-8.  <a href="https://stackoverflow.com/questions/43618487/why-are-emoji-characters-like-treated-so-strangely-in-swift-strings" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emoji ZWJ sequences in the Swift programming language</a>
-9.  <a href="https://github.com/JuliaLang/julia/issues/40071" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Issue with code parser in the Julia programming language</a>
+2. <a href="https://blog.emojipedia.org/emoji-zwj-sequences-three-letters-many-possibilities/" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emojipedia: emoji ZWJ sequences</a>
+3. <a href="https://unicode-table.com/en/FE0F/" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Text and emoji variant</a>
+4. <a href="https://www.latimes.com/business/technology/la-fi-tn-emoji-q-and-a-20160125-htmlstory.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Meet the Shadowy Overlords Who Approve Emojis</a>
+5. <a href="https://www.unicode.org/emoji/proposals.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emoji proposal guidelines</a>
+6. <a href="https://unicode.org/L2/L2015/15319-emoji-zwj-seq-harmful.pdf" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emoji ZWJ Sequence Considered Harmful</a>
+7. <a href="https://www.unicode.org/emoji/charts/emoji-zwj-sequences.html" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">List of standardized emoji ZWJ sequences</a>
+8. <a href="https://stackoverflow.com/questions/43618487/why-are-emoji-characters-like-treated-so-strangely-in-swift-strings" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Emoji ZWJ sequences in the Swift programming language</a>
+9. <a href="https://github.com/JuliaLang/julia/issues/40071" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">Issue with code parser in the Julia programming language</a>
 10. <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_length" rel="noopener noreferrer" target="_blank" title="I am safe and open in a new tab">String type in the Julia programming language</a>
 </div>

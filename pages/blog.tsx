@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { BlogEntry } from '../components/Blog/BlogEntry';
-import { Layout } from '../components/Layouts/Layout';
-import { getAllPosts } from '../lib/blog-api';
-import { BlogPost } from '../lib/blog-post.entity';
+import { BlogEntry } from "../components/Blog/BlogEntry";
+import { Layout } from "../components/Layouts/Layout";
+import { getAllPosts } from "../lib/blog-api";
+import { BlogPost } from "../lib/blog-post.entity";
 
 interface BlogPageProps {
     allPosts: BlogPost[];

@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-import { Layout } from '../components/Layouts/Layout';
+import { Layout } from "../components/Layouts/Layout";
 
 const CustomErrorPage: React.FC = ({}) => {
     return (
