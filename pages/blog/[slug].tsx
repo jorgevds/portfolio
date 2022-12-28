@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { remark } from "remark";
 import html from "remark-html";
 import { Mermaid } from "../../components/Blog/BlogDiagram";
@@ -92,6 +91,8 @@ export async function getStaticProps({ params }: Params) {
         .process(post.content || "");
 
     const content = result.toString();
+    console.log(content);
+    // get mermaid div out of string and inject as dangerouslySetInnerHTML, see if that resolves SSR?
 
     const mermaidSyntax: string = '<div class="mermaid">';
     const mermaid: boolean = content.includes(mermaidSyntax);
