@@ -12,23 +12,17 @@ import CustomErrorPage from "../404";
 
 type PostProps = {
     post: BlogPost;
+    mermaid: boolean;
     morePosts: BlogPost[];
     preview?: boolean;
 };
 
-const Post: React.FC<PostProps> = ({ post }) => {
-    // Pause server side rehydration until Mermaid has initialized
-    const [hydrated, setHydrated] = useState(false);
-    useEffect(() => {
-        setHydrated(true);
-    }, []);
-
-    if (!hydrated) return null;
+const Post: React.FC<PostProps> = ({ post, mermaid }) => {
     if (!post?.title) {
         return <CustomErrorPage />;
     }
 
-    return (
+    return mermaid ? (
         <Mermaid>
             <Layout>
                 <article className="p-4 minlg:p-12 minlg:w-largeClamp minlg:m-auto ">
@@ -52,6 +46,28 @@ const Post: React.FC<PostProps> = ({ post }) => {
                 </article>
             </Layout>
         </Mermaid>
+    ) : (
+        <Layout>
+            <article className="p-4 minlg:p-12 minlg:w-largeClamp minlg:m-auto ">
+                <BlogHeader
+                    title={post.title}
+                    coverImage={post.coverImage}
+                    date={post.date}
+                />
+                <section
+                    className="markdown"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                ></section>
+                <p className="pt-12 pb-4">- Jorge</p>
+                <p className="">
+                    <Link href="/blog">
+                        <a className="italic text-blue hover:underline">
+                            Read my other posts too
+                        </a>
+                    </Link>
+                </p>
+            </article>
+        </Layout>
     );
 };
 
@@ -77,12 +93,16 @@ export async function getStaticProps({ params }: Params) {
 
     const content = result.toString();
 
+    const mermaidSyntax: string = '<div class="mermaid">';
+    const mermaid: boolean = content.includes(mermaidSyntax);
+
     return {
         props: {
             post: {
                 ...post,
                 content,
             },
+            mermaid,
         },
     };
 }
