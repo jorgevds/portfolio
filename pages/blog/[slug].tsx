@@ -91,9 +91,7 @@ export async function getStaticProps({ params }: Params) {
         .process(post.content || "");
 
     const content = result.toString();
-    console.log(content);
     // get mermaid div out of string and inject as dangerouslySetInnerHTML, see if that resolves SSR?
-
     const mermaidSyntax: string = '<div class="mermaid">';
     const mermaid: boolean = content.includes(mermaidSyntax);
 

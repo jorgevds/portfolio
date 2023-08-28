@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import mermaid from "mermaid";
+import React, { useEffect } from "react";
 import { useReconcileHydration } from "../../lib/utils/reconcile-hydration.hook";
 
 mermaid.initialize({
