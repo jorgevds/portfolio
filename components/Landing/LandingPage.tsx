@@ -7,7 +7,7 @@ interface LandingPageProps {}
 
 const LandingPage: React.FC<LandingPageProps> = () => {
   return (
-    <section className="z-50 flex flex-col flex-1 w-full py-6 m-auto">
+    <section className="flex flex-col flex-1 w-full py-6 m-auto overscroll-none">
       <Hero />
       <ProjectList />
       <Contact />

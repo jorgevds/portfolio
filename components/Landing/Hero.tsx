@@ -1,5 +1,3 @@
-import React from "react";
-
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
@@ -20,6 +18,21 @@ const Hero: React.FC<HeroProps> = () => {
       >
         I make full stack web apps in React, TypeScript, and Node.js
       </h2>
+      <h3
+        className="text-xl sm:text-lg m-6"
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-delay="300"
+      >
+        And I run a company at{" "}
+        <a
+          href="https://ordinary-rabbit.com"
+          target="_blank"
+          className="external-link hover:text-white hover:bg-black"
+        >
+          Ordinary Rabbit
+        </a>
+      </h3>
     </article>
   );
 };

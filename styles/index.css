@@ -1,87 +1,97 @@
 @tailwind base;
 .inset-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hover-trigger .hover-target {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .hover-trigger:hover .hover-target {
-    opacity: 100%;
-    transition: all 0.3s ease-in-out;
+  opacity: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .hover-trigger .hover-img {
-    filter: brightness(100%);
-    transition: all 0.2s ease-in-out;
+  filter: brightness(100%);
+  transition: all 0.2s ease-in-out;
 }
 
 .hover-trigger:hover .hover-img {
-    filter: brightness(30%);
-    transition: all 0.2s ease-in-out;
+  filter: brightness(30%);
+  transition: all 0.2s ease-in-out;
 }
 
 .chroma-icon {
-    filter: brightness(0%);
+  filter: brightness(0%);
 }
 
 .markdown h3 {
-    @apply pt-4 text-xl font-medium;
+  @apply pt-4 text-xl font-medium;
 }
 
 .markdown p {
-    @apply py-4;
+  @apply py-4;
 }
 
 .markdown p:last-child {
-    @apply pb-12;
+  @apply pb-12;
 }
 
 .markdown-ol {
-    @apply py-4;
+  @apply py-4;
 }
 
 .markdown-ol h2 {
-    @apply pb-2 text-lg;
+  @apply pb-2 text-lg;
 }
 
 .markdown-ol ol {
-    @apply list-decimal;
-    padding-inline-start: 1rem;
+  @apply list-decimal;
+  padding-inline-start: 1rem;
 }
 
 .markdown a {
-    @apply text-blue;
+  @apply text-blue;
 }
 
 .markdown a:hover {
-    @apply underline;
+  @apply underline;
 }
 
 .blog-example {
-    @apply py-8 text-center minlg:py-12;
+  @apply py-8 text-center minlg:py-12;
 }
 
 .blog-example p {
-    padding: 0;
+  padding: 0;
 }
 
 .blog-example img {
-    @apply m-auto;
+  @apply m-auto;
 }
 
 .blog-example + p {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .mermaid svg {
-    @apply m-auto;
+  @apply m-auto;
 }
 
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .text-stroke-2 {
+    -webkit-text-stroke: thin mediumvioletred;
+  }
+}
+.external-link {
+  /* WIP */
+  /* cursor: url("/svg/external-link.svg"); */
+}
