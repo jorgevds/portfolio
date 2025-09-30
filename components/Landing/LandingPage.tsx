@@ -1,4 +1,5 @@
 import React from "react";
+import Brands from "./Brands";
 import Contact from "./Contact";
 import Hero from "./Hero";
 import ProjectList from "./ProjectList";
@@ -10,6 +11,7 @@ const LandingPage: React.FC<LandingPageProps> = () => {
     <section className="flex flex-col flex-1 w-full py-6 m-auto overscroll-none">
       <Hero />
       <ProjectList />
+      <Brands />
       <Contact />
     </section>
   );

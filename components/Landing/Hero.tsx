@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = () => {
         data-aos-once="true"
         data-aos-delay="300"
       >
-        I make full stack web apps in React, TypeScript, and Node.js
+        I make full stack web apps in a plethora of technologies
       </h2>
       <h3
         className="text-xl sm:text-lg m-6"
