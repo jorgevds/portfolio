@@ -36,10 +36,8 @@ const Post: React.FC<PostProps> = ({ post, mermaid }) => {
           ></section>
           <p className="pt-12 pb-4">- Jorge</p>
           <p className="">
-            <Link href="/blog">
-              <a className="italic text-blue hover:underline">
+            <Link href="/blog" className="italic text-blue hover:underline">
                 Read my other posts too
-              </a>
             </Link>
           </p>
         </article>
@@ -59,10 +57,8 @@ const Post: React.FC<PostProps> = ({ post, mermaid }) => {
         ></section>
         <p className="pt-12 pb-4">- Jorge</p>
         <p className="">
-          <Link href="/blog">
-            <a className="italic text-blue hover:underline">
+          <Link href="/blog" className="italic text-blue hover:underline">
               Read my other posts too
-            </a>
           </Link>
         </p>
       </article>

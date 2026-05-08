@@ -8,13 +8,11 @@ const Contact: React.FC<ContactProps> = () => {
     <article className="my-20 text-center min-h-md md:mx-4" id="contact">
       <h1 className="mb-4 text-2xl" data-aos="fade-up" data-aos-once="true">
         I'm always hard at work on the next project or{" "}
-        <Link href="/blog">
-          <a
+        <Link href="/blog" 
             title="Good writing ahead"
-            className="hover:text-white hover:bg-black"
-          >
+            className="underline hover:no-underline hover:text-white hover:bg-black"
+            >
             blog post
-          </a>
         </Link>
       </h1>
 

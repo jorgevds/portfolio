@@ -9,106 +9,104 @@ interface BrandedLogoProps {
 
 const BrandedLogo = (props: BrandedLogoProps) => {
   return (
-    <div className="w-[150px] h-full flex items-center">
       <Image
         src={props.src}
         alt={props.alt}
         width={150}
         height={75}
-        className={`max-w-none w-full h-auto ${props.classList}`}
+        className={`max-w-none minmd:w-[150px] w-[100px] h-full ${props.classList} minmd:pr-[35px]`}
       />
-    </div>
   );
 };
 
 const brands: BrandedLogoProps[] = [
   {
     src: "/brands/made.svg",
-    alt: "Made sux",
+    alt: "Made logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/rombit.webp",
-    alt: "Made sux",
+    alt: "Rombit logo",
     isScalableVector: false,
     classList: "chroma-icon",
   },
   {
     src: "/brands/techyard.png",
-    alt: "Made sux",
+    alt: "Techyard logo",
     isScalableVector: false,
     classList: "grayscale",
   },
   {
     src: "/brands/zeticon.svg",
-    alt: "Made sux",
+    alt: "Zeticon logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/etex.png",
-    alt: "Made sux",
+    alt: "ETEX logo",
     isScalableVector: false,
     classList: "grayscale",
   },
   {
     src: "/brands/cronos.svg",
-    alt: "Made sux",
+    alt: "Cronos logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/steelduxx.svg",
-    alt: "Made sux",
+    alt: "Steelduxx logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/octoo.svg",
-    alt: "Made sux",
+    alt: "Octoo logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/henco.png",
-    alt: "Made sux",
+    alt: "Henco logo",
     isScalableVector: false,
     classList: "grayscale",
   },
   {
     src: "/brands/sweet-mustard.svg",
-    alt: "Made sux",
+    alt: "Sweet Mustard logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/promat.jpg",
-    alt: "Made sux",
+    alt: "Promat logo",
     isScalableVector: false,
     classList: "grayscale",
   },
   {
     src: "/brands/noest.svg",
-    alt: "Made sux",
+    alt: "Noest logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/euronav.png",
-    alt: "Made sux",
+    alt: "Euronav logo",
     isScalableVector: false,
     classList: "grayscale",
   },
   {
     src: "/brands/cronos-aan-de-leie.svg",
-    alt: "Made sux",
+    alt: "Cronos aan de Leie logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
   {
     src: "/brands/electrolux.svg",
-    alt: "Made sux",
+    alt: "Electrolux logo",
     isScalableVector: true,
     classList: "chroma-icon",
   },
@@ -116,11 +114,12 @@ const brands: BrandedLogoProps[] = [
 
 export const BrandsList = () => {
   return (
-    <>
-      {brands.map((brand) => (
-        <BrandedLogo key={brand.src} {...brand} />
-      ))}
-      <div className="w-[35px]" />
-    </>
+      <>
+      {
+          brands.map((brand) => (
+              <BrandedLogo key={brand.src} {...brand} />
+          ))
+      }
+      </>
   );
 };

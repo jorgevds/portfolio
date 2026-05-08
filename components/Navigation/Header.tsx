@@ -5,7 +5,7 @@ export const Header: React.FC = () => {
     <header className="w-full bg-white shadow-sm">
       <nav className="flex flex-col">
         <ul className="flex py-4 m-auto">
-          <li className="font-serif text-2xl tracking-widest uppercase font-title">
+          <li className="text-2xl tracking-widest uppercase font-title">
             <a href="/" title="Homepage">
               Jorge Van de Sompel
             </a>

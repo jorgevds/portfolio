@@ -14,29 +14,27 @@ export const BlogEntry: React.FC<BlogEntryProps> = ({ post }) => {
 
     return (
         <li className="pb-8 cursor-pointer">
-            <Link href={`/blog/${post.slug}`}>
-                <a title={post.title}>
-                    <section className="p-4 transition duration-300 ease-in-out shadow-sm minlg:hover:shadow-md">
-                        <h3 className="pb-4 text-xl">{post.title}</h3>
-                        <Image
-                            src={coverImage.src}
-                            width={coverImage.width}
-                            height={coverImage.height}
-                            placeholder="blur"
-                            blurDataURL={coverImage.src}
-                        />
-                        {excerptLines.map((line: string, index: number) => (
-                            <p
-                                className={`md:pt-4 ${
-                                    index % excerptLines.length ? "pt-4" : ""
-                                }`}
-                                key={`Excerpt line at positon: ${index}`}
-                            >
-                                {line}
-                            </p>
-                        ))}
-                    </section>
-                </a>
+            <Link href={`/blog/${post.slug}`} title={post.title}>
+                <section className="p-4 transition duration-300 ease-in-out shadow-sm minlg:hover:shadow-md">
+                    <h3 className="pb-4 text-xl">{post.title}</h3>
+                    <Image
+                        src={coverImage.src}
+                        width={coverImage.width}
+                        height={coverImage.height}
+                        placeholder="blur"
+                        blurDataURL={coverImage.src}
+                    />
+                    {excerptLines.map((line: string, index: number) => (
+                        <p
+                            className={`md:pt-4 ${
+                                index % excerptLines.length ? "pt-4" : ""
+                            }`}
+                            key={`Excerpt line at positon: ${index}`}
+                        >
+                            {line}
+                        </p>
+                    ))}
+                </section>
             </Link>
         </li>
     );
