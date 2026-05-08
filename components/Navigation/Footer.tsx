@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Footer: React.FC = () => {
     return (
         <footer className="w-full m-auto text-center shadow-smTop">
@@ -28,30 +26,18 @@ export const Footer: React.FC = () => {
                             title="I am safe and open in a new tab"
                             className="m-auto"
                         >
-                            <img
-                                src="/svg/linkedin.svg"
-                                className="m-auto chroma-icon"
-                                alt="Linkedin logo as svg"
-                            />
+                            <img src="/svg/linkedin.svg" className="m-auto chroma-icon" alt="Linkedin logo as svg" />
                         </a>
                     </li>
                     <li className="flex m-auto sm:px-8">
-                        <a
-                            href="mailto:jorgevandesompel@gmail.com?Subject=I%20want%20to%20talk"
-                            className="m-auto"
-                        >
-                            <img
-                                src="/svg/mail.svg"
-                                className="m-auto chroma-icon"
-                                alt="Gmail logo as svg"
-                            />
+                        <a href="mailto:jorgevandesompel@gmail.com?Subject=I%20want%20to%20talk" className="m-auto">
+                            <img src="/svg/mail.svg" className="m-auto chroma-icon" alt="Gmail logo as svg" />
                         </a>
                     </li>
                 </ul>
                 <ul className="flex m-auto mb-4 text-sm">
                     <li className="m-auto sm:px-8">
-                        Copyright &copy; {new Date().getUTCFullYear()}. All
-                        rights reserved.
+                        Copyright &copy; {new Date().getUTCFullYear()}. All rights reserved.
                     </li>
                 </ul>
             </nav>

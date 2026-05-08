@@ -1,11 +1,11 @@
 ---
-title: "Insert title"
-excerpt: "Hook to attract readers"
-coverImage: 
-  src: "/blog/<img-name>.<extension>"
-  width: "width of img"
-  height: "height of img"
-date: "2022-month-day"
+title: 'Insert title'
+excerpt: 'Hook to attract readers'
+coverImage:
+    src: '/blog/<img-name>.<extension>'
+    width: 'width of img'
+    height: 'height of img'
+date: '2022-month-day'
 ---
 
 ### Lorem Ipsum

@@ -9,6 +9,7 @@ export interface BlogPost {
 
 export interface CoverImage {
     src: string;
-    width: string;
-    height: string;
+    width: number;
+    height: number;
+    alt: string;
 }

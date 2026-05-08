@@ -1,11 +1,12 @@
 ---
-title: "Emoji Magic in JavaScript"
-excerpt: "With great power comes an enormous amount of emojis. So many that most people never even get to use the more special (or mundane) ones, and even more people have probably never even heard of some emojis.<br>And I’m sure nobody in the history of the world has ever heard of an emoji ZWJ sequence."
+title: 'Emoji Magic in JavaScript'
+excerpt: 'With great power comes an enormous amount of emojis. So many that most people never even get to use the more special (or mundane) ones, and even more people have probably never even heard of some emojis.<br>And I’m sure nobody in the history of the world has ever heard of an emoji ZWJ sequence.'
 coverImage:
-    src: "/blog/emoji/emoji-magic.png"
-    width: "1260"
-    height: "256"
-date: "2022-09-18"
+    src: '/blog/emoji/emoji-magic.png'
+    width: 1260
+    height: 256
+    alt: 'Emojis in unicode being combined, in this case combining the unicode characters for a blank flag and a rainbow plus ZWJ sequence combines into the rainbow flag emoji.'
+date: '2022-09-18'
 ---
 
 Not all emojis are created equal. Some are more equal than others.

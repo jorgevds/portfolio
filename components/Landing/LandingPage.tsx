@@ -1,19 +1,18 @@
-import React from "react";
-import Brands from "./Brands";
-import Contact from "./Contact";
-import Hero from "./Hero";
-import ProjectList from "./ProjectList";
+import Brands from './Brands';
+import Contact from './Contact';
+import Hero from './Hero';
+import ProjectList from './ProjectList';
 
 interface LandingPageProps {}
 
 const LandingPage: React.FC<LandingPageProps> = () => {
-  return (
-    <section className="flex flex-col flex-1 w-full py-6 m-auto overscroll-none">
-      <Hero />
-      <ProjectList />
-      <Brands />
-      <Contact />
-    </section>
-  );
+    return (
+        <section className="flex flex-col flex-1 w-full py-6 m-auto overscroll-none">
+            <Hero />
+            <ProjectList />
+            <Brands />
+            <Contact />
+        </section>
+    );
 };
 export default LandingPage;

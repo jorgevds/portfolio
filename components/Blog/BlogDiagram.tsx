@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import mermaid from "mermaid";
-import { useReconcileHydration } from "../../lib/utils/reconcile-hydration.hook";
+import React, { useEffect } from 'react';
+import mermaid from 'mermaid';
+import { useReconcileHydration } from '../../lib/utils/reconcile-hydration.hook';
 
 mermaid.initialize({
     startOnLoad: true,
