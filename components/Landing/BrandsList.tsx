@@ -14,7 +14,7 @@ const BrandedLogo = (props: BrandedLogoProps) => {
             alt={props.alt}
             width={150}
             height={75}
-            className={`max-w-none minmd:w-[150px] w-[100px] h-full ${props.classList} minmd:pr-[35px]`}
+            className={`max-w-none minmd:w-[150px] w-[100px] h-full object-contain ${props.classList} minmd:pr-[35px]`}
         />
     );
 };
